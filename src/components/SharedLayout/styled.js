@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
+export const SharedLayoutMainStyled = styled.div`
+  padding: 0 20px;
+`;
+
 export const HeaderStyled = styled.header`
   padding: 20px;
   box-shadow: 0px 25px 20px -25px rgba(0, 0, 0, 0.7);

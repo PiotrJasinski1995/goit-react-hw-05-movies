@@ -1,7 +1,12 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import Loader from '../Loader/Loader';
-import { HeaderStyled, NavStyled, NavLinkStyled } from './styled';
+import {
+  HeaderStyled,
+  NavStyled,
+  NavLinkStyled,
+  SharedLayoutMainStyled,
+} from './styled';
 
 const SharedLayout = () => {
   return (
@@ -12,11 +17,11 @@ const SharedLayout = () => {
           <NavLinkStyled to="/movies">Movies</NavLinkStyled>
         </NavStyled>
       </HeaderStyled>
-      <main>
+      <SharedLayoutMainStyled>
         <Suspense fallback={<Loader />}>
           <Outlet />
         </Suspense>
-      </main>
+      </SharedLayoutMainStyled>
     </div>
   );
 };
